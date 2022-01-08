@@ -1,48 +1,58 @@
 @import "null.scss";
 
 //-------Fonts------------------
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@500;600;700&display=swap');
 
 //-------------BASIC------------------------------------------
 .wrapper {
     min-height: 100%;
     overflow: visible;
+    display: flex;
+    flex-direction: column;
+
+    
+
+
+
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 15px;
- 
 }
 
 //-------------HEADER------------------------------------------
 .header {
+    background-color: #6500FF;
+    width: 100%;
+    height: 800px;
+    top: 0;
+    left: 0;
+    position: absolute;
+        
 
 		&__container {
-            display: flex;
             height: 150px;
+            display: flex;
             align-items: center;
-            background-color: orange;
-            @media (max-width:600px){
+            @media (max-width:630px){
             flex-wrap: wrap;
             }
 		}
 
 		&__logo {
             flex-grow: 1;
-            @media (max-width:600px){
+            @media (max-width:630px){
                 order: 1;
                 }
 		}
 
 		&__menu {
+            z-index: 2;
             margin: 0 0 0 10px;
             flex-grow: 3;
-            @media (max-width:600px){
+            @media (max-width:630px){
                 min-width: 100%;
                 order: 3;
                 }
@@ -50,19 +60,24 @@
 		}
 
 		&__singin {
-            margin: 0 0 0 10px;
+            z-index: 2;
+            margin: 0 100px 0 10px;
             flex-grow: 1;
             min-width: 120px;
             text-align: right;
-            @media (max-width:600px){
+            @media (max-width:1000px){
+                margin: 0 0 0 10px;
+                transition: 1s;
+                }
+            @media (max-width:630px){
                 order: 2;
                 }
             
 
-			&_link {                 
+			&_link {  
                 font-family: Releway;
                 font-size: 18px;
-                font-weight: 600;
+                font-weight: 500;
                 color: #fff;
                 padding: 13px 32px;
                 border-radius: 22.5px;
@@ -71,7 +86,8 @@
                     background-color: #bb2f2f;
                     transition: .5s;
                     color: rgba(253, 253, 253, 0.89);
-                }
+                }          
+                
 			}
 		}
 }
@@ -82,7 +98,7 @@
 		&__body {
             display: flex;
             justify-content:right;
-            @media (max-width:600px){
+            @media (max-width:630px){
                 justify-content: space-around;
             }
 		}
@@ -107,8 +123,85 @@
             }
 		}
 }
+//-------------PAGE--------------------------------------------
+
+.page{
+    flex: 1 1 auto;
+    z-index: 1;
+}
+
 //-------------MAIN--------------------------------------------
 
+.main {
+    padding: 250px 0 0 0;
+
+    &__container {
+        display: flex;
+
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin: 0 -50px 0 0;
+        @media(max-width:940px){
+            margin: 0;
+            text-align: center;
+        }
+
+
+        &_tattle {
+            font-family: Raleway;
+            font-size: 70px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 75px;
+        }
+
+        &_subtittle {
+            font-family: 'Open Sans';
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 30px;
+            color: #fff;
+
+            margin: 20px 0 0 0;
+        }
+
+        &_link {
+            align-self: flex-start;
+            font-family: 'Raleway';
+            font-weight: 600;
+            font-size: 18px;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 25px;
+            background-color: #FF5F60;
+            margin: 50px 0 0 0 ;
+            @media(max-width:940px){
+                align-self: center;
+            }
+            &:hover{
+                background-color: #bb2f2f;
+                transition: .5s;
+                color: rgba(253, 253, 253, 0.89);
+            }
+        }
+    }
+
+    &__image {
+
+        &_img {
+            max-width: 100%;
+           object-fit: cover; 
+           @media(max-width:940px){
+               display: none;
+           }
+        }
+    }
+}
+
+//-------------ADMISSION------------------------------------------
 
 
 
