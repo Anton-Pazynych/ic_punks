@@ -1,0 +1,123 @@
+@import "null.scss";
+
+//-------Fonts------------------
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+
+
+
+
+//-------------BASIC------------------------------------------
+.wrapper {
+    min-height: 100%;
+    overflow: visible;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+ 
+}
+
+//-------------HEADER------------------------------------------
+.header {
+
+		&__container {
+            display: flex;
+            height: 150px;
+            align-items: center;
+            background-color: orange;
+            @media (max-width:600px){
+            flex-wrap: wrap;
+            }
+		}
+
+		&__logo {
+            flex-grow: 1;
+            @media (max-width:600px){
+                order: 1;
+                }
+		}
+
+		&__menu {
+            margin: 0 0 0 10px;
+            flex-grow: 3;
+            @media (max-width:600px){
+                min-width: 100%;
+                order: 3;
+                }
+            
+		}
+
+		&__singin {
+            margin: 0 0 0 10px;
+            flex-grow: 1;
+            min-width: 120px;
+            text-align: right;
+            @media (max-width:600px){
+                order: 2;
+                }
+            
+
+			&_link {                 
+                font-family: Releway;
+                font-size: 18px;
+                font-weight: 600;
+                color: #fff;
+                padding: 13px 32px;
+                border-radius: 22.5px;
+                background-color: #FF5F60;
+                &:hover{
+                    background-color: #bb2f2f;
+                    transition: .5s;
+                    color: rgba(253, 253, 253, 0.89);
+                }
+			}
+		}
+}
+
+
+.menu {
+
+		&__body {
+            display: flex;
+            justify-content:right;
+            @media (max-width:600px){
+                justify-content: space-around;
+            }
+		}
+
+		&__item {
+            &:not(:first-child){
+            margin-left: 7.5%;
+            }
+
+        
+            
+		}
+
+		&__link {
+            font-family: Raleway;
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            &:hover{
+                color: #FF5F60;
+                transition: .5s;
+            }
+		}
+}
+//-------------MAIN--------------------------------------------
+
+
+
+
+
+
+//-------------FOOTER------------------------------------------
+
+
+
+
+
+
