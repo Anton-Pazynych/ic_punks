@@ -1,3 +1,611 @@
-.dofe{
-    text-align: center;
+@import "null.scss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap');//------Breakpoints
+
+
+
+
+
+
+//--------------------Basick-----------------------------------
+
+.wrapper{
 }
+
+.container {
+    max-width: 1135px;
+    padding: 0 10px;
+    margin: 0 auto;  
+}
+
+.icon-link {
+    :hover{
+        fill: #22688b;
+    }
+}
+
+.btc_blue{
+        background: #2DA4E0;
+        border-radius: 10px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 25px;
+        line-height: 24px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        :hover{
+            background: #22688b;
+        }
+}
+
+.tittle {
+    font-family: Retro Computer;
+    text-align: center;
+    font-size: 34px;
+    line-height: 48px;
+    color: #47BE68;
+    @media (max-width: $breakpoints488){
+        font-size: 22px;
+        line-height: 29px;
+    }
+} 
+
+
+//---------------------Header-----------------------------------------
+.header {
+    
+    background-color: #121214;
+    height: 64px;
+    
+    
+    
+
+    &__body { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;  
+        
+    }
+
+    &__logo {
+        & img{
+            max-width: 100%;
+        }
+        @media (max-width: $breakpoints488){
+            width: 73px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        
+        
+
+
+        &_icon {
+            &:not(:first-child){
+                margin: 0 0 0 15px;
+            }
+            @media (max-width: $breakpoints375){
+                display: none;
+                
+            }
+        }
+    }
+
+    &__wallet {
+        display: flex;
+        align-items: center;
+
+        &_text {
+            margin: 0 13px 0 0;
+
+            font-family: 'Roboto Mono', monospace;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            @media (max-width: $breakpoints488){
+                font-size: 14px;
+            }
+
+        }
+
+        &_icon {
+             margin: 0 8px 0 0;
+        }
+    }   
+}
+//--------------------Main-----------------------------------------
+.main {
+    background-color: #1C1B1F  ;
+    max-height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0 25px;
+   
+    
+    
+    &__body {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+        
+
+    }
+
+    &__line1 {
+        width: 285.5px;
+        border: 1px dashed #FFFFFF; 
+        margin: 70px 0 0 0;
+        @media(max-width: $breakpoints768){
+            width: 203px;
+        }
+    }
+
+    &__line2 {
+        width: 285.5px;
+        border: 1px dashed #FFFFFF; 
+        @media(max-width: $breakpoints768){
+            width: 203px;
+        }
+    }
+
+    &__image {
+        margin: 12px 0;
+        max-width: 350px;
+        @media(max-width: $breakpoints768){
+            width: 250px;
+        }
+    }
+
+    &__tittle {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 30px;
+        line-height: 88px;
+        color: #fff;
+        margin: 42px 0 0 0;
+        & span {
+            font-family: Retro Computer;
+            color: #47BE68;
+        }
+        @media(max-width: $breakpoints768){
+            line-height: 34px;
+        }
+    }
+
+    &__text {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 24px;
+        color: #FFFFFF;
+        margin: 19px 0 0 0;
+        z-index: 2;
+        @media(max-width: $breakpoints768){
+            font-size: 14px; 
+        }
+        
+    }
+
+    &__button {
+        align-self:flex-start;
+        text-align: center;
+        margin: 50px 0 60px 0;
+        padding: 18px 65px;
+        z-index: 2;
+        @media(max-width: $breakpoints768){
+            padding: 14px 48px;
+            font-size: 18px;
+            align-self:center;
+        }
+    }
+//-------------Imagings-----------------------------------
+
+    &__img1 {
+        position: absolute;
+        top: -50px;
+        left: 0px;
+        @media(max-width: $breakpoints1300){
+            width:83px ;
+            top: -30px;
+            }
+        }
+    
+        &__img2 {     
+            z-index: 1;  
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            @media(max-width: $breakpoints1300){
+            width: 83px ;
+            left: -25px;
+            bottom: 150px;
+            }
+        }
+    
+        &__img3 {
+            position: absolute;
+            top: -40px;
+            right: 42%;
+            @media(max-width: $breakpoints992){
+                right: 10%;
+            }
+            @media(max-width: $breakpoints768){
+                right: -5%; 
+            }
+            @media(max-width: $breakpoints488){
+                width: 100px ;
+                top: 0px;
+                right: 20px;
+            }
+            @media(max-width: $breakpoints375){
+                width: 93px;
+                top: 0px;
+                right: 0; 
+            }     
+        }
+    
+        &__img4 {
+            position: absolute;
+            top: 0px;
+            left: 60%;
+            @media(max-width: $breakpoints992){
+                display: none;
+            }
+        }
+}
+//--------------------Tariff-----------------------------------------
+.tariff {
+    background: #1D1D1E;
+
+    &__body {
+        padding: 90px 0 115px 0;
+        @media (max-width: $breakpoints488){
+            padding: 50px 0 60px 0;
+        }
+    }
+
+    &__tittle {
+    }
+
+    &__items-body {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 70px 0 0 0;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 198px;
+        height: 358px;
+        background: #201F23;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 27px 20px 0 20px;
+        margin: 30px 10px 0 10px;
+        @media (max-width: $breakpoints488){
+            width: 364px;
+            height: 244px;
+            padding: 22px 15px 0 15px;
+        }
+        @media (max-width: $breakpoints375){
+            width: 300px;
+            height: 300px;
+            padding: 22px 15px 0 15px;
+        }
+
+
+        &_tittle {
+            font-family: Roboto Mono;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #47BE68;
+            @media (max-width: $breakpoints488){
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        &_line {
+            width: 90%;
+            border: 1px solid #47BE68; 
+            margin: 20px 5% 33px 5%;
+            @media (max-width: $breakpoints488){
+                
+                margin: 20px 0 20px 0;
+            }
+            @media (max-width: $breakpoints375){
+                
+            }
+
+
+            
+        }    
+
+        &_text {
+            font-family: Roboto Mono;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            @media (max-width: $breakpoints488){
+                font-size: 16px;
+            }
+        }
+    }
+}
+//-------------------Plan-------------------------------------------
+.plan {
+    background: #1C1B1F;
+    padding: 60px 0 110px 0;
+    position: relative;
+    @media(max-width:$breakpoints992){
+        padding: 60px 10px 110px 10px;
+    }
+
+    &__body {
+    }
+
+    &__tittle {
+        margin: 0 10px 120px 10px;
+        @media(max-width:$breakpoints992){
+            margin: 0;
+        }
+    }
+
+    &__items-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @media(max-width:$breakpoints992){
+            align-items: center; 
+            margin: 30px 0 0 0;
+        }
+        
+
+    }
+
+    &__item {
+        width: 650px;
+        background: #201F23;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 40px 55px 35px 43px;
+        margin: 0 20px 18px 20px;
+        @media(max-width:$breakpoints992){
+            margin: 20px;
+        }
+        @media(max-width:$breakpoints768){
+            width: 500px;
+            
+        }
+        @media(max-width:550px){
+            width: 360px;
+        }
+        @media(max-width:$breakpoints375){
+            width: 290px;
+        }
+
+
+        &_tittle {
+            font-family: Roboto Mono;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 24px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #47BE68;
+            margin: 0 0 28px 0;
+        }
+
+        &_text {
+            font-family: Roboto Mono;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }    
+    }
+    &__image{
+        position: absolute;
+        top: 30%;
+        left: -5%;
+        @media(max-width:$breakpoints1300){
+            left: -30%;  
+        }
+        @media(max-width:$breakpoints992){
+            position: relative;
+            top: 0;
+            left: 0;    
+        }
+        @media(max-width:$breakpoints768){
+            width: 320px ;   
+        }
+    }
+    &__image-body{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+//-------------------Join-------------------------------------------
+.join {
+    background:#111318;
+    padding: 86px 0 55px 20px ;
+    
+
+    &__body {
+        position: relative;
+    }
+
+    &__tittle {
+        text-align: left;
+        @media(max-width: 555px){
+            font-size: 22px;
+            line-height: 29px;
+        }
+    }
+
+    &__text {
+        font-family: Roboto Mono;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        color: #fff;
+        margin: 13px 0 25px 0;
+        @media(max-width: 555px){
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__input {
+        align-self:flex-start;
+        background: #1C1B1F;
+        border-radius: 5px;
+        width: 508px;
+        height: 54px;
+        padding: 0 0 0 30px;
+
+        font-family: Roboto Mono;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        @media(max-width: 555px){
+            width: 90%;
+        }
+    }
+
+    &__send {
+        font-family: Roboto Mono;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 24px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #fff;
+
+        margin: 33px 0 0 0;
+        padding: 15px 60px;
+        background: #2DA4E0;
+        border-radius: 10px;
+        align-self:flex-start;
+        @media(max-width: 555px){
+            font-size: 18px;
+            line-height: 24px;
+            padding: 13px 52px;
+        }
+    }
+    
+    &__image-1{
+        position: absolute;
+        top: -150px;
+        right: -150px;
+        @media(max-width: 1450px){
+            top: -150px;
+            right: -50px;  
+        }
+        @media(max-width: 1200px){
+            top: -150px;
+            right: 100px;  
+            width: 300px;
+        }
+        @media(max-width: $breakpoints992){
+            top: -250px;
+            right: 0px;  
+            width: 300px;
+        }
+        @media(max-width: 555px){
+            width: 170px;
+            top: -150px;
+            right: 0px; 
+        }
+    }
+
+    &__image-2{
+        position: absolute;
+        top: 120px;
+        right: 150px;
+        @media(max-width: $breakpoints768){
+            top: 120px;
+            right: 0px;
+        }
+        @media(max-width: $breakpoints488){
+            display: none;
+        }
+    }
+}
+//-------------------Copyright--------------------------------------
+.copyright {
+    background: #121214;
+    padding: 56px 0 36px 20px;
+    @media(max-width:$breakpoints488){
+        padding: 40px 10px;
+
+    }
+    
+
+    &__body {
+    }
+
+    &__social-text {
+        font-family: Roboto Mono;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        @media(max-width:$breakpoints488){
+            letter-spacing: 0em;
+        }
+    }
+
+    &__icon {
+        margin: 0 0 0 20px;
+        &:first-child{
+        margin: 0 0 0 40px;
+        }
+        @media(max-width:$breakpoints488){
+            margin: 0 0 0 5px;
+            &:first-child{
+            margin: 0 0 0 20px;
+            }   
+        }    
+        
+    }
+
+    &__text {
+        margin: 20px 0 0 0;
+        font-family: Roboto Mono;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        color: rgba(255, 255, 255, 0.5);
+        @media(max-width:$breakpoints488){
+        }
+    }
+}
+
+
+
