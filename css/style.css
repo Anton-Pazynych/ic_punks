@@ -607,6 +607,9 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
+.join__send:hover {
+  background: #22688b;
+}
 @media (max-width: 555px) {
   .join__send {
     font-size: 18px;
